@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LeetCode Solutions Portfolio
 
-## Getting Started
+Next.js 기반의 개인 알고리즘 풀이 포트폴리오입니다. 문제 풀이를 체계적으로 기록하고, 웹사이트로 관리할 수 있습니다.
 
-First, run the development server:
+## 주요 기능
+- 마크다운 기반 문제 풀이 데이터 관리
+- 문제 목록 및 상세 풀이 페이지 자동 생성
+- 자동화 스크립트로 문제 폴더/파일 생성
+- Vercel을 통한 손쉬운 배포
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 빠른 시작
+1. 의존성 설치
+   ```bash
+   npm install
+   ```
+2. 개발 서버 실행
+   ```bash
+   npm run dev
+   ```
+3. 브라우저에서 확인: http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 문제 풀이 추가
+- 자동화 스크립트 실행
+  ```bash
+  node scripts/create-problem.js
+  ```
+- 안내에 따라 정보 입력 → 문제 폴더/파일 자동 생성
+- README.md에 풀이 작성, solution.js에 코드 추가
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 배포
+- GitHub에 코드 푸시 후 Vercel에 연결하면 자동 배포
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 목적
+- 알고리즘 문제 풀이를 체계적으로 기록하고, 포트폴리오로 활용
+- 파일 기반 관리로 간편한 확장 및 유지보수
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 참고
+- 주요 라이브러리 설명: `docs/dependencies.md`
+- 상세 사용법: `docs/usage.md`
