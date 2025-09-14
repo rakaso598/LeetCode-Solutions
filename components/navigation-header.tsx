@@ -15,7 +15,7 @@ export function NavigationHeader() {
 
         <nav className="flex items-center space-x-2">
           <Button variant="ghost" asChild>
-            {/* <Link href="/">홈</Link> */}
+            <Link href="/problems">문제 목록</Link>
           </Button>
         </nav>
       </div>
