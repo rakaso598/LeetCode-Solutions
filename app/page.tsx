@@ -65,13 +65,13 @@ export default function Home() {
             <div className="text-3xl font-bold mb-2">{totalProblems}개</div>
             <div className="flex gap-2 text-sm">
               <span className="px-2 py-1 bg-green-100 text-green-700 rounded-md">
-                Easy: {difficultyCount.easy || 0}
+                Easy / {difficultyCount.easy || 0}
               </span>
               <span className="px-2 py-1 bg-yellow-100 text-yellow-700 rounded-md">
-                Medium: {difficultyCount.medium || 0}
+                Medium / {difficultyCount.medium || 0}
               </span>
               <span className="px-2 py-1 bg-red-100 text-red-700 rounded-md">
-                Hard: {difficultyCount.hard || 0}
+                Hard / {difficultyCount.hard || 0}
               </span>
             </div>
           </CardContent>
