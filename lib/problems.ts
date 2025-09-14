@@ -6,15 +6,46 @@ const contentDir = path.join(process.cwd(), 'content', 'problems');
 
 export function getSortedProblemsData() {
   const fileNames = fs.readdirSync(contentDir);
-  const allProblemsData = fileNames.map(fileName => {
-    const slug = fileName;
-    const fullPath = path.join(contentDir, fileName, 'README.md');
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
-    return {
-      slug,
-      ...(matterResult.data as { title: string; difficulty: string; tags: string[]; date: string; }),
-    };
-  });
+  const allProblemsData = fileNames
+    .filter(fileName => {
+      const fullPath = path.join(contentDir, fileName, 'README.md');
+      return fs.existsSync(fullPath);
+    })
+    .map(fileName => {
+      const slug = fileName;
+      const fullPath = path.join(contentDir, fileName, 'README.md');
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const matterResult = matter(fileContents);
+      return {
+        slug,
+        ...(matterResult.data as { title: string; difficulty: string; tags: string[]; date: string; }),
+      };
+    });
   return allProblemsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export function getProblemData(slug: string) {
+  const fullPath = path.join(contentDir, slug, 'README.md');
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const matterResult = matter(fileContents);
+
+  return {
+    slug,
+    content: matterResult.content,
+    ...(matterResult.data as { title: string; difficulty: string; tags: string[]; date: string; leetcode_url?: string; }),
+  };
+}
+
+export function getAllProblemSlugs() {
+  const fileNames = fs.readdirSync(contentDir);
+  return fileNames
+    .filter(fileName => {
+      const fullPath = path.join(contentDir, fileName, 'README.md');
+      return fs.existsSync(fullPath);
+    })
+    .map(fileName => ({
+      params: {
+        slug: fileName,
+      },
+    }));
 }
