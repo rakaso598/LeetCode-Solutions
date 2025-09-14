@@ -40,9 +40,9 @@ export default async function ProblemPage({ params }: ProblemPageProps) {
       {/* Navigation */}
       <div className="mb-6">
         <Button variant="ghost" asChild>
-          <Link href="/problems">
+          <Link href="/">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            문제 목록으로
+            홈으로
           </Link>
         </Button>
       </div>

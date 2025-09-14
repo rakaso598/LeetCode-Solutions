@@ -25,9 +25,9 @@ export default function NotFound() {
               </Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link href="/problems">
+              <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                문제 목록
+                홈
               </Link>
             </Button>
           </div>

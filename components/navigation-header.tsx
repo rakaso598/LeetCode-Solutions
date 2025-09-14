@@ -17,9 +17,6 @@ export function NavigationHeader() {
           <Button variant="ghost" asChild>
             <Link href="/">홈</Link>
           </Button>
-          <Button variant="ghost" asChild>
-            <Link href="/problems">문제 목록</Link>
-          </Button>
         </nav>
       </div>
     </header>
