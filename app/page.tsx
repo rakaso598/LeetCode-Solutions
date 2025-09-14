@@ -47,10 +47,10 @@ export default function Home() {
   };
 
   return (
-    <div className="mx-auto max-w-[1200px] px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-8">
+    <div className="mx-auto max-w-[1200px] px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
       {/* Header */}
       <section className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">LeetCode Solutions</h1>
+        {/* <h1 className="text-4xl font-bold mb-2">LeetCode Solutions</h1> */}
         {/* <p className="text-muted-foreground">해결한 문제 목록</p> */}
       </section>
 
