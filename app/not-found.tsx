@@ -5,7 +5,7 @@ import { Home, Search, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="page-container py-16 text-center">
+    <div className="mx-auto max-w-[1200px] px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-16 text-center">
       <Card className="max-w-md mx-auto">
         <CardHeader>
           <div className="mx-auto w-24 h-24 bg-muted rounded-full flex items-center justify-center mb-4">

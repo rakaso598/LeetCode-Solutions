@@ -48,7 +48,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="page-container py-8 max-w-4xl mx-auto">
+    <div className="mx-auto max-w-4xl px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-8">
       {/* Hero Section */}
       <section className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">

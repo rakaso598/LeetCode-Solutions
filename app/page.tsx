@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <div className="page-container py-8">
+    <div className="mx-auto max-w-[1200px] px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-8">
       {/* Hero Section */}
       <section className="text-center py-16 mb-16 relative">
         {/* Background decoration */}

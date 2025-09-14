@@ -23,7 +23,7 @@ export default function ProblemsPage() {
   };
 
   return (
-    <div className="page-container py-8">
+    <div className="mx-auto max-w-[1200px] px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-8">
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-4">문제 목록</h1>
         <p className="text-muted-foreground text-lg mb-6">

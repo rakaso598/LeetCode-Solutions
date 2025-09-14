@@ -36,7 +36,7 @@ export default async function ProblemPage({ params }: ProblemPageProps) {
   };
 
   return (
-    <div className="page-container py-8 max-w-4xl mx-auto">
+    <div className="mx-auto max-w-4xl px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-8">
       {/* Navigation */}
       <div className="mb-6">
         <Button variant="ghost" asChild>

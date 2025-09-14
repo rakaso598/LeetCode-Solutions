@@ -8,7 +8,7 @@ import { Search, Code2 } from "lucide-react";
 export function NavigationHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="page-container flex h-16 items-center">
+      <div className="mx-auto flex h-16 items-center max-w-[1200px] px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Code2 className="h-6 w-6" />
           <span className="font-bold">LeetCode Solutions</span>

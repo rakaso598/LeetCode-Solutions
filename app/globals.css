@@ -121,28 +121,6 @@
   }
 }
 
-/* 전체 페이지 일관된 컨테이너 너비 설정 */
-.page-container {
-  max-width: 1280px; /* max-w-7xl equivalent */
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .page-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .page-container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
 /* Prose styles for markdown content */
 .prose {
   max-width: none;
@@ -245,16 +223,7 @@
   font-weight: 600;
 }
 
-.prose em {
-  font-style: italic;
-}
-
-.prose a {
-  color: hsl(var(--primary));
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.prose a:hover {
-  text-decoration: none;
+/* 전체 페이지의 시각적 균형을 위한 추가 설정 */
+body {
+  overflow-x: hidden; /* 가로 스크롤 방지 */
 }
