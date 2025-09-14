@@ -51,7 +51,7 @@ export default function Home() {
       {/* Header */}
       <section className="mb-8">
         <h1 className="text-4xl font-bold mb-2">LeetCode Solutions</h1>
-        <p className="text-muted-foreground">해결한 문제들의 목록입니다</p>
+        {/* <p className="text-muted-foreground">해결한 문제 목록</p> */}
       </section>
 
       {/* Stats Section - 실제 데이터 기반 */}
@@ -125,7 +125,7 @@ export default function Home() {
                   )}
                 </div>
                 <Button asChild className="w-full">
-                  <Link href={`/problems/${problem.slug}`}>
+                  <Link href={`/${problem.slug}`}>
                     문제 보기
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
