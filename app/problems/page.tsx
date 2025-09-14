@@ -5,8 +5,17 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+// 문제 데이터 타입 정의
+interface Problem {
+  slug: string;
+  title: string;
+  difficulty: string;
+  date: string;
+  tags: string[];
+}
+
 export default function ProblemsPage() {
-  const problems = getSortedProblemsData();
+  const problems: Problem[] = getSortedProblemsData();
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty.toLowerCase()) {
@@ -32,7 +41,7 @@ export default function ProblemsPage() {
 
       {/* Problems Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {problems.map((problem: any) => (
+        {problems.map((problem: Problem) => (
           <Card key={problem.slug} className="group hover:shadow-lg hover:scale-[1.02] transition-all duration-200 border hover:border-primary/20">
             <CardHeader className="pb-3">
               <div className="flex items-center justify-between mb-2">

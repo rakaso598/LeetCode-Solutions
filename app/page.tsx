@@ -5,18 +5,28 @@ import { getSortedProblemsData } from "@/lib/problems";
 import Link from "next/link";
 import { ArrowRight, Trophy, Calendar } from "lucide-react";
 
+// 문제 데이터 타입 정의
+interface Problem {
+  slug: string;
+  title: string;
+  difficulty: string;
+  date: string;
+  tags: string[];
+}
+
 export default function Home() {
-  const allProblems = getSortedProblemsData();
+  const allProblems: Problem[] = getSortedProblemsData();
 
   // 실제 데이터 기반 통계 계산
   const totalProblems = allProblems.length;
-  const difficultyCount = allProblems.reduce((acc: Record<string, number>, problem: any) => {
+  const difficultyCount = allProblems.reduce((acc: Record<string, number>, problem: Problem) => {
     acc[problem.difficulty.toLowerCase()] = (acc[problem.difficulty.toLowerCase()] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
 
+  // 가장 최근 날짜 찾기
   const lastUpdateDate = allProblems.length > 0
-    ? new Date(allProblems[0].date).toLocaleDateString('ko-KR', {
+    ? new Date(Math.max(...allProblems.map(p => new Date(p.date).getTime()))).toLocaleDateString('ko-KR', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -86,7 +96,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {allProblems.map((problem: any) => (
+          {allProblems.map((problem: Problem) => (
             <Card key={problem.slug} className="group hover:shadow-lg hover:scale-[1.02] transition-all duration-200 border hover:border-primary/20">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between mb-2">
