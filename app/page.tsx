@@ -125,7 +125,7 @@ export default function Home() {
                   )}
                 </div>
                 <Button asChild className="w-full">
-                  <Link href={`/${problem.slug}`}>
+                  <Link href={`/problems/${problem.slug}`}>
                     문제 보기
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
