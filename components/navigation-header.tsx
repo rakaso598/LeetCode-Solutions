@@ -13,11 +13,11 @@ export function NavigationHeader() {
           <span className="font-bold">LeetCode Solutions</span>
         </Link>
 
-        <nav className="flex items-center space-x-2">
+        {/* <nav className="flex items-center space-x-2">
           <Button variant="ghost" asChild>
             <Link href="/problems">문제 목록</Link>
           </Button>
-        </nav>
+        </nav> */}
       </div>
     </header>
   );
